@@ -10,8 +10,12 @@ import Combine
 class FizzBuzzViewModel: ObservableObject {
     let user: User?
     
+    @Published var count: Int
+    
     init() {
         self.user = User(firstName: "Nivedha", lastName: "Rajendran")
+        
+        _count = .init(initialValue: 0)
     }
     
     func fizzBuzz(_ number: Int) -> String {
@@ -38,5 +42,9 @@ class FizzBuzzViewModel: ObservableObject {
     
     func asyncSum (value1: Int, value2: Int, handler: @escaping ((Int) -> Void)) {
         handler(value1 + value2)
+    }
+    
+    func tappedCount() {
+        count += 1
     }
 }

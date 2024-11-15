@@ -124,6 +124,14 @@ SetUp and TearDown:
 “when adding tests to code that depends on global state and doesn’t have tests before making a change. Here, you should add your tests before making any change to the code, and so the life cycle methods are useful to start writing tests. Once you have your tests in place, you can refactor with confidence and remove the dependency on global state and the need to hook into the test life cycle.”
 “setUp and tearDown are useful to prepare the app for the execution of certain UI tests and to clean up its state afterward.”
 
+
+AAA Design Pattern:
+In the context of XCTest for SwiftUI, the "AAA" pattern typically refers to the Arrange, Act, Assert pattern. This pattern is commonly used in unit testing to structure tests in a clean and organized manner.
+
+Arrange: Set up the necessary preconditions, state, or data for the test. Prepare your environment (views, controllers, data).
+Act: Perform the action that triggers the behavior you're testing (e.g., button press, state change). Trigger the behavior you're testing (e.g., a button press).
+Assert: Verify that the expected result occurs based on the action performed. Verify the expected results (e.g., checking a label or value change).
+
 --start from page 23
 
 

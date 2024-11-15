@@ -29,9 +29,24 @@
 		5A838EEA2CE6332F00BE38FF /* TDDUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = TDDUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
+/* Begin PBXFileSystemSynchronizedBuildFileExceptionSet section */
+		5A838F2E2CE78D3D00BE38FF /* Exceptions for "TDD" folder in "TDDUITests" target */ = {
+			isa = PBXFileSystemSynchronizedBuildFileExceptionSet;
+			membershipExceptions = (
+				ContentView.swift,
+				FizzBuzz.swift,
+				User.swift,
+			);
+			target = 5A838EE92CE6332F00BE38FF /* TDDUITests */;
+		};
+/* End PBXFileSystemSynchronizedBuildFileExceptionSet section */
+
 /* Begin PBXFileSystemSynchronizedRootGroup section */
 		5A838ED22CE6332D00BE38FF /* TDD */ = {
 			isa = PBXFileSystemSynchronizedRootGroup;
+			exceptions = (
+				5A838F2E2CE78D3D00BE38FF /* Exceptions for "TDD" folder in "TDDUITests" target */,
+			);
 			path = TDD;
 			sourceTree = "<group>";
 		};

@@ -13,14 +13,15 @@ struct ContentView: View {
     
     init(model: FizzBuzzViewModel, input: Int? = nil) {
         self.model = model
-        self.input = 3
+        self.input = input ?? 3
     }
     var body: some View {
         VStack {
-            Image(systemName: "globe")
-                .imageScale(.large)
-                .foregroundStyle(.tint)
-            Text("Hello, world!")
+            
+            Button("Tap") {
+                model.tappedCount()
+            }
+            Text("Tapped Count: \(model.count)")
         }
         .padding()
         .onAppear() {

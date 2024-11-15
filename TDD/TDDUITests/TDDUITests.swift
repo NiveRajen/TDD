@@ -6,8 +6,20 @@
 //
 
 import XCTest
+import SwiftUI
+@testable import TDD
 
 final class TDDUITests: XCTestCase {
+    
+    private var hostingVC: UIViewController!
+    
+    override func setUp() {
+        
+        //Arrange
+        let contentView = ContentView(model: FizzBuzzViewModel(), input: 3)
+        
+        hostingVC = UIHostingController(rootView: contentView)
+    }
 
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
@@ -38,6 +50,20 @@ final class TDDUITests: XCTestCase {
             measure(metrics: [XCTApplicationLaunchMetric()]) {
                 XCUIApplication().launch()
             }
+        }
+    }
+    
+    
+    func testTappedCount() {
+     
+        //Act
+        if let buttons = hostingVC.view.subviews.first(where: { $0 is UIButton }) as? UIButton {
+            buttons.sendActions(for:.touchUpInside)
+        }
+        
+        //Assert
+        if let textLabel = hostingVC.view.subviews.first(where: { $0 is UILabel }) as? UILabel {
+            XCTAssertEqual(textLabel.text, "Tapped Count: 1")
         }
     }
 }
