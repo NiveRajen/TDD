@@ -112,7 +112,7 @@ class LifeCycleExampleTest: XCTestCase {
     func testB() throws {
        print("This is test B")
     }
-
+```
 Injection:
 
 “As your code becomes more complicated, it might seem tempting to simplify your tests by preparing the components needed in the setUp methods or to clean up the state of the app after the tests run in the tearDown methods.”
